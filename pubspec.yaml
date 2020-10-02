@@ -93,6 +93,9 @@ fonts:
   - family: OpenSans
     fonts:
       - asset: fonts/SecularOne-Regular.ttf
+  - family: Futura
+    fonts:
+      - asset: fonts/Peddana-Regular.ttf    
 
 
   #

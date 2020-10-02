@@ -17,6 +17,14 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.6),
+                    spreadRadius: 5,
+                    blurRadius: 5,
+                    offset: Offset(1, 1), // changes position of shadow
+                  ),
+                ],
                 color: Color(0xFFE4C2Fd),
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -26,7 +34,7 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                       EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
                   child: Text(
                     "9 to 12",
-                    style: TextStyle(color: Colors.black, fontSize: 28),
+                    style: TextStyle(color: Colors.black, fontSize: 26),
                   ),
                 ),
               ),
@@ -58,7 +66,7 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                   style: TextStyle(
                       color: Colors.black87,
                       fontSize: 36,
-                      fontFamily: "OpenSans",
+                      fontFamily: "Futura",
                       letterSpacing: 0.5),
                 ),
                 Container(
@@ -72,7 +80,10 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                           EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
                       child: Text(
                         "4 weeks - 8 Classes",
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontFamily: 'Futura'),
                       ),
                     ),
                   ),
@@ -87,95 +98,127 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                   children: <Widget>[
                     Container(
                       margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-                      height: 750,
-                      width: 750,
+                      height: 850,
+                      width: 850,
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
                               "\nOdd One Out",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nVenn Diagram",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nAverage",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nData Sufficiency",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nProfit and Loss",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nSimplification",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nNumbers",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nTime and Distance",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nRaces and Games",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nRatio and Proportion",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nChain Rule",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nCompound Interest",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nAges",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nArea",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nAbsolute Value",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
                               "\nInequalities",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                           ]),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(16),
-                          color: Colors.yellow[200]),
+                          color: Color(0xFFF2BF5E)),
                     ),
                     Container(
                       height: 60.0,
@@ -261,89 +304,100 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "\nOdd One Out",
+                              "\nAlligation or Mixture",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nVenn Diagram",
+                              "\nPartnership",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nAverage",
+                              "\nTime and Work",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nData Sufficiency",
+                              "\nBoats ans Streams",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nProfit and Loss",
+                              "\nCalender",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nSimplification",
+                              "\nSquare and Cube Root",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nNumbers",
+                              "\nBanker's Discount",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nTime and Distance",
+                              "\nClock",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nRaces and Games",
+                              "\nPnC - Level 1",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nRatio and Proportion",
+                              "\nPipes and Cisterns",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nChain Rule",
+                              "\nStocks and Shares",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nCompound Interest",
+                              "\nQuestion Bank & Next Course Intro",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nAges",
+                              "\nVolume and SA",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
-                            ),
-                            Text(
-                              "\nArea",
-                              style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
-                            ),
-                            Text(
-                              "\nAbsolute Value",
-                              style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
-                            ),
-                            Text(
-                              "\nInequalities",
-                              style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 20,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
                             ),
                           ]),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(16),
-                          color: Colors.red[300]),
+                          color: Color(0xFFFF6161)),
                     ),
                     Container(
                       height: 60.0,

@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Items item5 = new Items(
     title: "Cover All Topics",
     subtitle:
-        "\nOur courses and the teaching material has been designed by experts in a way that it covers all domains of Aptitude in the minimum possible time ",
+        "Our courses and the teaching material has been designed by experts in a way that it covers all domains of Aptitude in the minimum possible time ",
     event: "",
     img: "assets/images/topics.jpg",
   );
@@ -286,13 +286,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: List.generate(8, (index) {
                   return Container(
                       child: Card(
-                    color: Colors.white,
+                    color: Color(0xFFBDBDBD),
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Image.asset(
-                            myList[index].img,
-                            width: 42,
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Image.asset(
+                              myList[index].img,
+                              width: 42,
+                            ),
+                            alignment: Alignment.center,
                           ),
                           Text(
                             myList[index].title,
@@ -305,13 +309,17 @@ class _HomeScreenState extends State<HomeScreen> {
                           SizedBox(
                             height: 8,
                           ),
-                          Text(
-                            myList[index].subtitle,
-                            style: GoogleFonts.openSans(
-                                textStyle: TextStyle(
-                                    color: Colors.black38,
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w600)),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Text(
+                              myList[index].subtitle,
+                              style: GoogleFonts.openSans(
+                                  textStyle: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w600)),
+                              textAlign: TextAlign.justify,
+                            ),
                           ),
                           SizedBox(
                             height: 14,
