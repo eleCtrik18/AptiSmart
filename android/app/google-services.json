@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "708003283926",
+    "firebase_url": "https://aptismart-f29b1.firebaseio.com",
+    "project_id": "aptismart-f29b1",
+    "storage_bucket": "aptismart-f29b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708003283926:android:aa822e329b8e56d5f89a77",
+        "android_client_info": {
+          "package_name": "com.example.e_learning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708003283926-5700bvco42lahsjlr9o5k6vbdjnc324h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP56XpL-ioQNV06Ojc1IZTI8rYstY5_xI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708003283926-5700bvco42lahsjlr9o5k6vbdjnc324h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
