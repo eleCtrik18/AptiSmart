@@ -75,7 +75,14 @@ flutter:
     - assets/images/parents.png
     - assets/images/p2.jpg
     - assets/logo/google.jpg
-    - assets/logo/phone.png
+    - assets/images/price2.jpg
+    - assets/images/price3.jpg
+    - assets/images/price4.jpg
+    - assets/images/sevenp2.jpg
+    - assets/images/fivep1.jpg
+    - assets/images/fivep2.jpg
+  
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
