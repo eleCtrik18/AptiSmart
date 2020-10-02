@@ -2,7 +2,6 @@ import 'package:e_learning/screens/aboutus.dart';
 import 'package:e_learning/screens/contact.dart';
 import 'package:e_learning/screens/courses.dart';
 import 'package:e_learning/screens/fivesix.dart';
-import 'package:e_learning/screens/login.dart';
 import 'package:e_learning/screens/my_courses.dart';
 import 'package:e_learning/screens/ninetotwelve.dart';
 import 'package:e_learning/screens/privacy_policy.dart';

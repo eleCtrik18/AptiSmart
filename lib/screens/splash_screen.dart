@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:e_learning/screens/login.dart';
 import 'package:e_learning/screens/new_login.dart';
 import 'package:e_learning/screens/welcome_screen.dart';
 import 'package:flutter/cupertino.dart';
