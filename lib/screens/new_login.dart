@@ -2,6 +2,7 @@ import 'package:e_learning/screens/home_screen.dart';
 import 'package:e_learning/screens/phone_verification.dart';
 import 'package:e_learning/screens/signin.dart';
 import 'package:e_learning/services/auth.dart';
+import 'package:e_learning/services/googlesignin.dart';
 import 'package:e_learning/utilities/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -216,7 +217,15 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           _buildSocialBtn(
-            () => print('Login with Google'),
+            () => {
+              signInWithGoogle().whenComplete(() {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(),
+                  ),
+                );
+              })
+            },
             AssetImage(
               'assets/logo/google.jpg',
             ),

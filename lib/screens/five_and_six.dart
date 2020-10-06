@@ -1,4 +1,7 @@
+import 'package:e_learning/razorpay/advancec.dart';
+import 'package:e_learning/razorpay/basicc.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Fiveandsix extends StatefulWidget {
   @override
@@ -6,9 +9,11 @@ class Fiveandsix extends StatefulWidget {
 }
 
 class _FiveandsixState extends State<Fiveandsix> {
+  String bullet = "\u2022 ";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Color(0xFFFFFFFF),
         appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.black),
           title: Row(
@@ -24,8 +29,8 @@ class _FiveandsixState extends State<Fiveandsix> {
                       offset: Offset(1, 1), // changes position of shadow
                     ),
                   ],
-                  color: Colors.yellow[200],
-                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(4),
                 ),
                 child: Center(
                   child: Padding(
@@ -33,7 +38,7 @@ class _FiveandsixState extends State<Fiveandsix> {
                         EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
                     child: Text(
                       "5 & 6",
-                      style: TextStyle(color: Colors.black, fontSize: 26),
+                      style: TextStyle(color: Colors.blue[900], fontSize: 26),
                     ),
                   ),
                 ),
@@ -61,18 +66,13 @@ class _FiveandsixState extends State<Fiveandsix> {
               children: <Widget>[
                 Text(
                   "Basic",
-                  style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 36,
-                    fontFamily: "Futura",
-                    letterSpacing: 0.5,
-                  ),
+                  style: GoogleFonts.titilliumWeb(
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600)),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFff6e6e),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
                   child: Center(
                     child: Padding(
                       padding:
@@ -80,8 +80,8 @@ class _FiveandsixState extends State<Fiveandsix> {
                       child: Text(
                         "3 weeks - 6 Classes",
                         style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
+                          color: Colors.black,
+                          fontSize: 17,
                           fontFamily: 'Futura',
                         ),
                       ),
@@ -98,71 +98,72 @@ class _FiveandsixState extends State<Fiveandsix> {
                   children: <Widget>[
                     Container(
                       margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-                      height: 550,
-                      width: 550,
+                      height: 350,
+                      width: 450,
                       child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "\nFractions and Decimals",
+                              "     \u2022 Fractions and Decimals",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nNumbers",
+                              "     \u2022 Numbers",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nGeometry",
+                              "     \u2022 Geometry",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nData Sufficiency",
+                              "     \u2022 Data Sufficiency",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nTricky Puzzles",
+                              "     \u2022 Tricky Puzzles",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nBlood Relations",
+                              "     \u2022 Blood Relations",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nNVR - Intro",
+                              "     \u2022 NVR - Intro",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nMental Ability - Intro",
+                              "     \u2022 Mental Ability - Intro",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nLogical Deduction - Intro",
+                              "     \u2022 Logical Deduction - Intro",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
@@ -188,7 +189,12 @@ class _FiveandsixState extends State<Fiveandsix> {
                       padding: EdgeInsets.symmetric(vertical: 25.0),
                       width: 130.0,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Basicc()));
+                        },
                         padding: EdgeInsets.all(15.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
@@ -217,24 +223,20 @@ class _FiveandsixState extends State<Fiveandsix> {
               children: <Widget>[
                 Text(
                   "Advance",
-                  style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: 36,
-                      fontFamily: "OpenSans",
-                      letterSpacing: 0.5),
+                  style: GoogleFonts.titilliumWeb(
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600)),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFff6e6e),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
                   child: Center(
                     child: Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
                       child: Text(
                         "3 weeks - 6 Classes",
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: TextStyle(color: Colors.black, fontSize: 17),
                       ),
                     ),
                   ),
@@ -249,71 +251,72 @@ class _FiveandsixState extends State<Fiveandsix> {
                   children: <Widget>[
                     Container(
                       margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-                      height: 650,
-                      width: 650,
+                      height: 350,
+                      width: 450,
                       child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "\nNVR - Level 2",
+                              "     \u2022 NVR - Level 2",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nMental Ability - Level 2",
+                              "     \u2022 Mental Ability - Level 2",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nLogical Deduction - Level 2",
+                              "     \u2022 Logical Deduction - Level 2",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nClock - Basics",
+                              "     \u2022 Clock - Basics",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nHCF LCM",
+                              "     \u2022 HCF LCM",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nSeries",
+                              "     \u2022 Series",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nAverage",
+                              "     \u2022 Average",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nProfit and Loss",
+                              "     \u2022 Profit and Loss",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nProgression - Basics",
+                              "     \u2022 Progression - Basics",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
@@ -339,7 +342,12 @@ class _FiveandsixState extends State<Fiveandsix> {
                       padding: EdgeInsets.symmetric(vertical: 25.0),
                       width: 130.0,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Advancec()));
+                        },
                         padding: EdgeInsets.all(15.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),

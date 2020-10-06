@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:e_learning/screens/new_login.dart';
-import 'package:e_learning/screens/welcome_screen.dart';
+import 'package:e_learning/services/phone_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -20,7 +20,7 @@ class SplashScreenState extends State<ImageSplashScreen> {
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => LoginScreen(),
+          builder: (context) => AuthService().handleAuth(),
         ));
   }
 

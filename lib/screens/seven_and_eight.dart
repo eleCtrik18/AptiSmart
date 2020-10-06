@@ -1,4 +1,7 @@
+import 'package:e_learning/razorpay/advanceb.dart';
+import 'package:e_learning/razorpay/basicb.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Sevenandeight extends StatefulWidget {
   @override
@@ -6,9 +9,11 @@ class Sevenandeight extends StatefulWidget {
 }
 
 class _SevenandeightState extends State<Sevenandeight> {
+  String bullet = "\u2022 ";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Color(0xFFFFFFFF),
         appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.black),
           title: Row(
@@ -24,8 +29,8 @@ class _SevenandeightState extends State<Sevenandeight> {
                       offset: Offset(1, 1), // changes position of shadow
                     ),
                   ],
-                  color: Colors.blue[200],
-                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(4),
                 ),
                 child: Center(
                   child: Padding(
@@ -33,7 +38,7 @@ class _SevenandeightState extends State<Sevenandeight> {
                         EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
                     child: Text(
                       "7 & 8",
-                      style: TextStyle(color: Colors.black, fontSize: 26),
+                      style: TextStyle(color: Colors.blue[900], fontSize: 26),
                     ),
                   ),
                 ),
@@ -61,18 +66,13 @@ class _SevenandeightState extends State<Sevenandeight> {
               children: <Widget>[
                 Text(
                   "Basic",
-                  style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 36,
-                    fontFamily: "Futura",
-                    letterSpacing: 0.5,
-                  ),
+                  style: GoogleFonts.titilliumWeb(
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600)),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFff6e6e),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
                   child: Center(
                     child: Padding(
                       padding:
@@ -80,8 +80,8 @@ class _SevenandeightState extends State<Sevenandeight> {
                       child: Text(
                         "3 weeks - 6 Classes",
                         style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
+                          color: Colors.black,
+                          fontSize: 17,
                           fontFamily: 'Futura',
                         ),
                       ),
@@ -98,64 +98,65 @@ class _SevenandeightState extends State<Sevenandeight> {
                   children: <Widget>[
                     Container(
                       margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-                      height: 550,
-                      width: 550,
+                      height: 350,
+                      width: 450,
                       child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "\nNVR",
+                              "     \u2022 NVR",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nMental Ability",
+                              "     \u2022 Mental Ability",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nLogical Deduction",
+                              "     \u2022 Logical Deduction",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nVenn Diagrams",
+                              "     \u2022 Venn Diagrams",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nNumbers",
+                              "     \u2022 Numbers",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nChain Rule",
+                              "     \u2022 Chain Rule",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nFractions and Decimals",
+                              "     \u2022 Fractions and Decimals",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nInequalities",
+                              "     \u2022 Inequalities",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
@@ -181,7 +182,12 @@ class _SevenandeightState extends State<Sevenandeight> {
                       padding: EdgeInsets.symmetric(vertical: 25.0),
                       width: 130.0,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Basicb()));
+                        },
                         padding: EdgeInsets.all(15.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
@@ -210,24 +216,20 @@ class _SevenandeightState extends State<Sevenandeight> {
               children: <Widget>[
                 Text(
                   "Advance",
-                  style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: 36,
-                      fontFamily: "OpenSans",
-                      letterSpacing: 0.5),
+                  style: GoogleFonts.titilliumWeb(
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600)),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFff6e6e),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
                   child: Center(
                     child: Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
                       child: Text(
                         "4 weeks - 8 Classes",
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: TextStyle(color: Colors.black, fontSize: 17),
                       ),
                     ),
                   ),
@@ -242,120 +244,121 @@ class _SevenandeightState extends State<Sevenandeight> {
                   children: <Widget>[
                     Container(
                       margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-                      height: 850,
-                      width: 850,
+                      height: 550,
+                      width: 650,
                       child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "\nAverage",
+                              "     \u2022 Average",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nOdd one Out",
+                              "     \u2022 Odd one Out",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nProfit and Loss",
+                              "     \u2022 Profit and Loss",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nSimplification",
+                              "     \u2022 Simplification",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nBoats and Streams",
+                              "     \u2022 Boats and Streams",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nProbability-Basic",
+                              "     \u2022 Probability-Basic",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nGeometry",
+                              "     \u2022 Geometry",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nSquare and Cube Root",
+                              "     \u2022 Square and Cube Root",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nVolume and SA",
+                              "     \u2022 Volume and SA",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nTime and Distance",
+                              "     \u2022 Time and Distance",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nNVR - Level 2",
+                              "     \u2022 NVR - Level 2",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nMental Ability - Level 2",
+                              "     \u2022 Mental Ability - Level 2",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nLogical Deduction - Level 2",
+                              "     \u2022 Logical Deduction - Level 2",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nProgression - Basics",
+                              "     \u2022 Progression - Basics",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nClock - Basics",
+                              "     \u2022 Clock - Basics",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nData Interpretation",
+                              "     \u2022 Data Interpretation",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
@@ -381,7 +384,12 @@ class _SevenandeightState extends State<Sevenandeight> {
                       padding: EdgeInsets.symmetric(vertical: 25.0),
                       width: 130.0,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Advanceb()));
+                        },
                         padding: EdgeInsets.all(15.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),

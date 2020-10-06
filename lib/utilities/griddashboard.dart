@@ -50,6 +50,20 @@ class GridDashboard extends StatelessWidget {
     event: "",
     img: "assets/images/improvement.png",
   );
+  Items item9 = new Items(
+    title: "Weekend Classes",
+    subtitle:
+        "Classes only on the weekends, so that you can focus on other subjects for the rest of the week",
+    event: "",
+    img: "assets/images/weekend.png",
+  );
+  Items item10 = new Items(
+    title: "Whiteboard",
+    subtitle:
+        "A virtual whiteboard is used tohelp students understand topics better",
+    event: "",
+    img: "assets/images/whiteboard.png",
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +75,9 @@ class GridDashboard extends StatelessWidget {
       item5,
       item6,
       item7,
-      item8
+      item8,
+      item9,
+      item10
     ];
     var color = 0xffD3D3D3;
     return Flexible(

@@ -1,52 +1,86 @@
 import 'package:flutter/material.dart';
 
+import 'nine_to_twelve.dart';
+
 class Nine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFFFFFFF),
       appBar: AppBar(
-        title: Text("Class 9 to 12"),
-        backgroundColor: Colors.black,
+        iconTheme: IconThemeData(color: Colors.black),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.6),
+                    spreadRadius: 5,
+                    blurRadius: 5,
+                    offset: Offset(1, 1), // changes position of shadow
+                  ),
+                ],
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: Center(
+                child: Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
+                  child: Text(
+                    "9 & Above",
+                    style: TextStyle(color: Colors.blue[900], fontSize: 30),
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
         elevation: 0.0,
-      ),
-      body: Padding(
-          padding: EdgeInsets.only(left: 16, right: 16),
-          child: ListView(children: [
-            Center(
-                child: Text("3 Courses",
-                    style: TextStyle(
-                        color: Colors.blueAccent[700],
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold))),
-            SizedBox(height: 10),
-            Text(
-              "- Live teaching on a whiteboard like an actual classroom",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        actions: [
+          Opacity(
+            opacity: 0,
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Icon(Icons.ac_unit),
             ),
-            SizedBox(height: 10),
-            Text(
-                "- Become an expert in solving aptitude questions of all types",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            SizedBox(height: 10),
-            Text("- Learn faster methods of Solving problems",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            SizedBox(height: 10),
-            Text(
-                "- Enter into new domains of topics like Guesstimates and Permutation & combination",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            SizedBox(height: 10),
-            Text(
-                "- Be prepared for all types of Entrance exams, Olympiads and competitive Exams",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            SizedBox(height: 10),
-            Text(
-                "- Topics are divided into 4 courses with increasing difficulty levels",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            SizedBox(height: 10),
-            Text("- Get Certificate of Completion",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            SizedBox(height: 10),
-          ])),
+          ),
+        ],
+      ),
+      body: ListView(
+        children: <Widget>[
+          Image.asset("assets/images/nine.jpg"),
+          Container(
+            alignment: Alignment.bottomCenter,
+            padding: EdgeInsets.symmetric(vertical: 25.0),
+            width: 130.0,
+            child: RaisedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NinetoTwelve()));
+              },
+              padding: EdgeInsets.all(15.0),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(4),
+              ),
+              color: Color(0xFF37B5CD),
+              child: Text(
+                'Know More',
+                style: TextStyle(
+                  color: Colors.white,
+                  letterSpacing: 1.5,
+                  fontSize: 18.0,
+                  fontFamily: 'OpenSans',
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

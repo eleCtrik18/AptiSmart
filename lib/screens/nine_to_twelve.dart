@@ -1,3 +1,7 @@
+import 'package:e_learning/razorpay/advancea.dart';
+import 'package:e_learning/razorpay/basica.dart';
+import 'package:e_learning/razorpay/experta.dart';
+import 'package:e_learning/razorpay/intermeditea.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -7,9 +11,11 @@ class NinetoTwelve extends StatefulWidget {
 }
 
 class _NinetoTwelveState extends State<NinetoTwelve> {
+  String bullet = "\u2022 ";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFFFFFFF),
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         title: Row(
@@ -25,16 +31,16 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                     offset: Offset(1, 1), // changes position of shadow
                   ),
                 ],
-                color: Color(0xFFE4C2Fd),
-                borderRadius: BorderRadius.circular(20),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(4),
               ),
               child: Center(
                 child: Padding(
                   padding:
                       EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
                   child: Text(
-                    "9 to 12",
-                    style: TextStyle(color: Colors.black, fontSize: 26),
+                    "9 & Above",
+                    style: TextStyle(color: Colors.blue[900], fontSize: 26),
                   ),
                 ),
               ),
@@ -55,6 +61,7 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
         ],
       ),
       body: ListView(
+        shrinkWrap: true,
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.fromLTRB(12.0, 30.0, 12.0, 8.0),
@@ -63,17 +70,13 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
               children: <Widget>[
                 Text(
                   "Basic",
-                  style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: 36,
-                      fontFamily: "Futura",
-                      letterSpacing: 0.5),
+                  style: GoogleFonts.titilliumWeb(
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600)),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFff6e6e),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
                   child: Center(
                     child: Padding(
                       padding:
@@ -81,10 +84,9 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                       child: Text(
                         "4 weeks - 8 Classes",
                         style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontFamily: 'Futura',
-                        ),
+                            color: Colors.black,
+                            fontSize: 17,
+                            fontFamily: 'OpenSans'),
                       ),
                     ),
                   ),
@@ -99,122 +101,142 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                   children: <Widget>[
                     Container(
                       margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-                      height: 850,
-                      width: 850,
+                      height: 550,
+                      width: 450,
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(
-                              "\nOdd One Out",
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.black87,
-                                  fontFamily: "OpenSans"),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
                             ),
                             Text(
-                              "\nVenn Diagram",
+                              "     \u2022 Odd One Out",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.justify,
                             ),
                             Text(
-                              "\nAverage",
+                              "     \u2022 Venn Diagram",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.justify,
                             ),
                             Text(
-                              "\nData Sufficiency",
+                              "     \u2022 Average",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nProfit and Loss",
+                              "     \u2022 Data Sufficiency",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nSimplification",
+                              "     \u2022 Profit and Loss",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nNumbers",
+                              "     \u2022 Simplification",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nTime and Distance",
+                              "     \u2022 Numbers",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nRaces and Games",
+                              "     \u2022 Time and Distance",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nRatio and Proportion",
+                              "     \u2022 Races and Games",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nChain Rule",
+                              "     \u2022 Ratio and Proportion",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nCompound Interest",
+                              "     \u2022 Chain Rule",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nAges",
+                              "     \u2022 Compound Interest",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nArea",
+                              "     \u2022 Ages",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nAbsolute Value",
+                              "     \u2022 Area",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                             Text(
-                              "\nInequalities",
+                              "     \u2022 Absolute Value",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
+                            ),
+                            Text(
+                              "     \u2022 Inequalities",
+                              style: TextStyle(
+                                  fontSize: 22,
+                                  color: Colors.black87,
+                                  fontFamily: "OpenSans"),
+                              textAlign: TextAlign.left,
                             ),
                           ]),
                       decoration: BoxDecoration(
@@ -238,7 +260,12 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                       padding: EdgeInsets.symmetric(vertical: 25.0),
                       width: 130.0,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Basica()));
+                        },
                         padding: EdgeInsets.all(15.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
@@ -261,30 +288,26 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(12.0, 30.0, 12.0, 8.0),
+            padding: const EdgeInsets.fromLTRB(12.0, 30.0, 10.0, 8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
                   "Intermediate",
-                  style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: 36,
-                      fontFamily: "OpenSans",
-                      letterSpacing: 0.5),
+                  style: GoogleFonts.titilliumWeb(
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 32,
+                          fontWeight: FontWeight.w600)),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFff6e6e),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
                   child: Center(
                     child: Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
                       child: Text(
                         "4 weeks - 8 Classes",
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: TextStyle(color: Colors.black, fontSize: 15),
                       ),
                     ),
                   ),
@@ -299,99 +322,100 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                   children: <Widget>[
                     Container(
                       margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-                      height: 750,
-                      width: 750,
+                      height: 450,
+                      width: 650,
                       child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "\nAlligation or Mixture",
+                              "     \u2022 Alligation or Mixture",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nPartnership",
+                              "     \u2022 Partnership",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nTime and Work",
+                              "     \u2022 Time and Work",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nBoats ans Streams",
+                              "     \u2022 Boats ans Streams",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nCalender",
+                              "     \u2022 Calender",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nSquare and Cube Root",
+                              "     \u2022 Square and Cube Root",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nBanker's Discount",
+                              "     \u2022 Banker's Discount",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nClock",
+                              "     \u2022 Clock",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nPnC - Level 1",
+                              "     \u2022 PnC - Level 1",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nPipes and Cisterns",
+                              "     \u2022 Pipes and Cisterns",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nStocks and Shares",
+                              "     \u2022 Stocks and Shares",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nQuestion Bank & Next Course Intro",
+                              "     \u2022 Question Bank",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nVolume and SA",
+                              "     \u2022 Volume and SA",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
@@ -417,7 +441,12 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                       padding: EdgeInsets.symmetric(vertical: 25.0),
                       width: 130.0,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Intermediteaa()));
+                        },
                         padding: EdgeInsets.all(15.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
@@ -446,24 +475,20 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
               children: <Widget>[
                 Text(
                   "Advance",
-                  style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: 36,
-                      fontFamily: "OpenSans",
-                      letterSpacing: 0.5),
+                  style: GoogleFonts.titilliumWeb(
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600)),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFff6e6e),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
                   child: Center(
                     child: Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
                       child: Text(
                         "4 weeks - 8 Classes",
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: TextStyle(color: Colors.black, fontSize: 17),
                       ),
                     ),
                   ),
@@ -478,92 +503,93 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                   children: <Widget>[
                     Container(
                       margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-                      height: 750,
-                      width: 750,
+                      height: 450,
+                      width: 450,
                       child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "\nNVR",
+                              "     \u2022 NVR",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nCalender",
+                              "     \u2022 Calender",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nLogarithms",
+                              "     \u2022 Logarithms",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nPnc - Level 2",
+                              "     \u2022 Pnc - Level 2",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nTrue Discount",
+                              "     \u2022 True Discount",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nLogical Deduction",
+                              "     \u2022 Logical Deduction",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nProbability - Level 1",
+                              "     \u2022 Probability - Level 1",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nTrains",
+                              "     \u2022 Trains",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nProgression",
+                              "     \u2022 Progression",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nGeometry",
+                              "     \u2022 Geometry",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nMental Ability - Level 1",
+                              "     \u2022 Mental Ability - Level 1",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
                             Text(
-                              "\nData Interpretation",
+                              "     \u2022 Data Interpretation",
                               style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
                             ),
@@ -589,7 +615,12 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                       padding: EdgeInsets.symmetric(vertical: 25.0),
                       width: 130.0,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Advancea()));
+                        },
                         padding: EdgeInsets.all(15.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
@@ -618,24 +649,20 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
               children: <Widget>[
                 Text(
                   "Expert",
-                  style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: 36,
-                      fontFamily: "OpenSans",
-                      letterSpacing: 0.5),
+                  style: GoogleFonts.titilliumWeb(
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600)),
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFff6e6e),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
                   child: Center(
                     child: Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
                       child: Text(
                         "4 weeks - 8 Classes",
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: TextStyle(color: Colors.black, fontSize: 17),
                       ),
                     ),
                   ),
@@ -650,60 +677,61 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                   children: <Widget>[
                     Container(
                       margin: const EdgeInsets.only(left: 15.0, right: 15.0),
-                      height: 650,
-                      width: 650,
+                      height: 350,
+                      width: 450,
                       child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "\nNVR",
+                              "     \u2022 NVR",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 22, color: Colors.black87),
                             ),
                             Text(
-                              "\nPnC - Level 3",
+                              "     \u2022 PnC - Level 3",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 22, color: Colors.black87),
                             ),
                             Text(
-                              "\nProbability - Level 2",
+                              "     \u2022 Probability - Level 2",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 22, color: Colors.black87),
                             ),
                             Text(
-                              "\nGuesstimates",
+                              "     \u2022 Guesstimates",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 22, color: Colors.black87),
                             ),
                             Text(
-                              "\nMental Ability - Level 2",
+                              "     \u2022 Mental Ability - Level 2",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 22, color: Colors.black87),
                             ),
                             Text(
-                              "\nStatistics",
+                              "     \u2022 Statistics",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 22, color: Colors.black87),
                             ),
                             Text(
-                              "\nData Interpretation - Level 2",
+                              "     \u2022 Data Interpretation - Level 2",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 22, color: Colors.black87),
                             ),
                             Text(
-                              "\nHOTS - 1",
+                              "     \u2022 HOTS - 1",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 22, color: Colors.black87),
                             ),
                             Text(
-                              "\nHOTS - 2",
+                              "     \u2022 HOTS - 2",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 22, color: Colors.black87),
                             ),
                             Text(
-                              "\nHOTS - 3",
+                              "     \u2022 HOTS - 3",
                               style: TextStyle(
-                                  fontSize: 20, color: Colors.black87),
+                                  fontSize: 22, color: Colors.black87),
                             ),
                           ]),
                       decoration: BoxDecoration(
@@ -727,7 +755,12 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                       padding: EdgeInsets.symmetric(vertical: 25.0),
                       width: 130.0,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Experta()));
+                        },
                         padding: EdgeInsets.all(15.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
@@ -753,4 +786,10 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
       ),
     );
   }
+}
+
+@override
+Widget build(BuildContext context) {
+  // TODO: implement build
+  throw UnimplementedError();
 }

@@ -35,6 +35,17 @@ dependencies:
   firebase_auth: ^0.18.1+1
   google_sign_in: ^4.5.4
   cloud_firestore: ^0.14.1+2
+  material_design_icons_flutter: ^4.0.5655
+  url_launcher: ^5.7.2
+  webview_flutter: ^1.0.0
+  razorpay_flutter: ^1.2.2
+  toast: ^0.1.5
+  http:
+  permission_handler: ^5.0.1+1
+  flutter_pdfview: ^1.0.0+10
+  path_provider: ^1.6.5
+  flutter_windowmanager: ^0.0.1+1
+
 
 dev_dependencies:
   flutter_test:
@@ -72,15 +83,37 @@ flutter:
     - assets/images/Presentation1.jpg
     - assets/images/holding-phone.png
     - assets/images/sign.png
-    - assets/images/parents.png
-    - assets/images/p2.jpg
     - assets/logo/google.jpg
+    - assets/logo/phone.png
     - assets/images/price2.jpg
     - assets/images/price3.jpg
     - assets/images/price4.jpg
     - assets/images/sevenp2.jpg
     - assets/images/fivep1.jpg
     - assets/images/fivep2.jpg
+    - assets/logo/whatsapp.png
+    - assets/logo/facebook.png
+    - assets/images/about.jpg
+    - assets/images/nine.jpg
+    - assets/images/seven.jpg
+    - assets/images/T1.jpg
+    - assets/images/T2.jpg
+    - assets/images/T3.jpg
+    - assets/images/whiteboard.png
+    - assets/images/weekend.png
+    - assets/images/basica.jpg
+    - assets/images/intermediatea.jpg
+    - assets/images/advancea.jpg
+    - assets/images/experta.jpg
+    - assets/images/basicb.jpg
+    - assets/images/advanceb.jpg
+    - assets/images/basicc.jpg
+    - assets/images/advancec.jpg
+    - assets/logo/lomgo.png
+    - assets/images/newhome.jpg
+    - assets/images/onestep.jpg
+    - assets/images/student.jpg
+
   
 
 
@@ -102,8 +135,16 @@ fonts:
       - asset: fonts/SecularOne-Regular.ttf
   - family: Futura
     fonts:
-      - asset: fonts/Peddana-Regular.ttf    
-
+      - asset: fonts/Peddana-Regular.ttf  
+  - family: Anton
+    fonts:
+      - asset: fonts/Anton-Regular.ttf    
+  - family: Dance 
+    fonts:
+      - asset: fonts/DancingScript-VariableFont_wght.ttf
+  - family: Futuralight
+    fonts:
+      - asset: fonts/Futura Light.ttf    
 
   #
   # For details regarding fonts from package dependencies,

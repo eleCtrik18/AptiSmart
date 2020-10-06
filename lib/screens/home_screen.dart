@@ -7,8 +7,11 @@ import 'package:e_learning/screens/ninetotwelve.dart';
 import 'package:e_learning/screens/privacy_policy.dart';
 import 'package:e_learning/screens/seveneight.dart';
 import 'package:e_learning/screens/terms_condition.dart';
+import 'package:e_learning/services/phone_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_windowmanager/flutter_windowmanager.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -16,6 +19,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  Future<void> secureScreen() async {
+    await FlutterWindowManager.addFlags(FlutterWindowManager.FLAG_SECURE);
+  }
+
+  @override
+  void initState() {
+    secureScreen();
+
+    super.initState();
+  }
+
   Items item1 = new Items(
       title: "Live Classes",
       subtitle:
@@ -46,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Items item5 = new Items(
     title: "Cover All Topics",
     subtitle:
-        "Our courses and the teaching material has been designed by experts in a way that it covers all domains of Aptitude in the minimum possible time ",
+        "Our courses and the teaching material has been designed  in a way that it covers all domains of Aptitude in the minimum time ",
     event: "",
     img: "assets/images/topics.jpg",
   );
@@ -71,6 +85,27 @@ class _HomeScreenState extends State<HomeScreen> {
     event: "",
     img: "assets/images/improvement.png",
   );
+  Items item9 = new Items(
+    title: "Weekend Classes",
+    subtitle:
+        "Classes only on the weekends, so that you can focus on other subjects for the rest of the week",
+    event: "",
+    img: "assets/images/weekend.png",
+  );
+  Items item10 = new Items(
+    title: "Whiteboard",
+    subtitle:
+        "A virtual whiteboard is used tohelp students understand topics better",
+    event: "",
+    img: "assets/images/whiteboard.png",
+  );
+  Items item11 = new Items(
+    title: "One step Ahead",
+    subtitle:
+        "Our courses will always keep you one step ahead of everyone else",
+    event: "",
+    img: "assets/images/onestep.jpg",
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -82,21 +117,27 @@ class _HomeScreenState extends State<HomeScreen> {
       item5,
       item6,
       item7,
-      item8
+      item8,
+      item9,
+      item10,
+      item11
     ];
     var color = 0xffD3D3D3;
     return Scaffold(
+        backgroundColor: Color(0XFFFFFFFF),
         appBar: AppBar(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
                   'Apti',
-                  style: TextStyle(fontSize: 22, color: Colors.black87),
+                  style: TextStyle(
+                      fontSize: 22, color: Colors.black87, fontFamily: 'Anton'),
                 ),
                 Text(
                   'Smart',
-                  style: TextStyle(fontSize: 22, color: Colors.black87),
+                  style: TextStyle(
+                      fontSize: 22, color: Colors.black87, fontFamily: 'Anton'),
                 )
               ],
             ),
@@ -105,23 +146,31 @@ class _HomeScreenState extends State<HomeScreen> {
             elevation: 0.0,
             actions: [
               Opacity(
-                opacity: 0,
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
-                  child: Icon(Icons.ac_unit),
-                ),
-              ),
+                  opacity: 1.0,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    child: IconButton(
+                      onPressed: () async {
+                        await AuthService().signOut();
+                      },
+                      icon: Icon(
+                        MdiIcons.logout,
+                      ),
+                    ),
+                  ))
             ],
             iconTheme: new IconThemeData(color: Colors.black)),
         drawer: new Drawer(
           child: new ListView(
             children: <Widget>[
               new UserAccountsDrawerHeader(
-                accountName: new Text('Chetan Singh'),
-                accountEmail: new Text('singhchetan0542@gmail.com'),
+                accountName: new Text(
+                  'Welcome to AptiSmart',
+                  style: TextStyle(fontSize: 20),
+                ),
+                //accountEmail: new Text('singhchetan0542@gmail.com'),
                 currentAccountPicture: new CircleAvatar(
-                  backgroundColor: Colors.blue[200],
-                  child: new Text('CS'),
+                  child: Image.asset("assets/logo/lomgo.png"),
                 ),
               ),
               // new Container(
@@ -210,34 +259,35 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: MediaQuery.of(context).size.width,
                   ),
                   Image(
-                      image: AssetImage("assets/images/topics.jpg"),
+                      image: AssetImage("assets/images/student.jpg"),
                       height: 400),
                 ])),
-            Text(
-              "BE PREPARED FOR EVERYTHING",
-              style: GoogleFonts.openSans(
-                  textStyle: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600)),
+            Padding(
+              padding:
+                  EdgeInsets.only(top: 50, bottom: 50, left: 16, right: 16),
+              child: Image(
+                image: AssetImage("assets/images/newhome.jpg"),
+              ),
             ),
             SizedBox(
               height: 4,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 16, right: 16),
+              padding:
+                  EdgeInsets.only(top: 50, bottom: 50, left: 16, right: 16),
               child: Image(
                 image: AssetImage("assets/images/wordcloud.png"),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 16, right: 16),
+              padding:
+                  EdgeInsets.only(top: 50, bottom: 50, left: 16, right: 16),
               child:
                   Image(image: AssetImage("assets/images/Presentation1.jpg")),
             ),
             Padding(
               padding:
-                  EdgeInsets.only(left: 16, right: 16, top: 36, bottom: 16),
+                  EdgeInsets.only(left: 16, right: 16, top: 100, bottom: 50),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -246,11 +296,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: <Widget>[
                       Text(
                         "What makes us Special",
-                        style: GoogleFonts.openSans(
+                        style: GoogleFonts.robotoCondensed(
                             textStyle: TextStyle(
                                 color: Colors.black,
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold)),
+                                fontSize: 30,
+                                fontWeight: FontWeight.w600)),
                       ),
                       SizedBox(
                         height: 4,
@@ -260,7 +310,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Color(0xffa29aac),
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w600)),
                       ),
                     ],
@@ -280,73 +330,86 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 500,
               child: GridView.count(
                 //     scrollDirection: Axis.horizontal,
-                crossAxisCount: 2,
+                crossAxisCount: 1,
                 childAspectRatio: 1.0,
                 padding: EdgeInsets.only(left: 16, right: 16),
-                children: List.generate(8, (index) {
+                children: List.generate(11, (index) {
                   return Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.red[200].withOpacity(0.8),
+                            spreadRadius: 5,
+                            blurRadius: 5,
+                            offset: Offset(1, 1), // changes position of shadow
+                          ),
+                        ],
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
                       child: Card(
-                    color: Color(0xFFBDBDBD),
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            child: Image.asset(
-                              myList[index].img,
-                              width: 42,
-                            ),
-                            alignment: Alignment.center,
-                          ),
-                          Text(
-                            myList[index].title,
-                            style: GoogleFonts.openSans(
-                                textStyle: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600)),
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            child: Text(
-                              myList[index].subtitle,
-                              style: GoogleFonts.openSans(
-                                  textStyle: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w600)),
-                              textAlign: TextAlign.justify,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 14,
-                          ),
-                          Text(
-                            myList[index].event,
-                            style: GoogleFonts.openSans(
-                                textStyle: TextStyle(
-                                    color: Colors.black87,
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w600)),
-                          ),
-                        ]),
-                  ));
+                        color: Color(0xFFFFFFFF),
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                child: Image.asset(
+                                  myList[index].img,
+                                  height: 105,
+                                  width: 110,
+                                ),
+                              ),
+                              Container(
+                                child: Text(
+                                  myList[index].title,
+                                  style: GoogleFonts.openSans(
+                                      textStyle: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.w600)),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 18,
+                              ),
+                              Container(
+                                padding: EdgeInsets.all(8),
+                                child: Text(
+                                  myList[index].subtitle,
+                                  style: GoogleFonts.openSans(
+                                      textStyle: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 14,
+                              ),
+                              Text(
+                                myList[index].event,
+                                style: GoogleFonts.openSans(
+                                    textStyle: TextStyle(
+                                        color: Colors.black87,
+                                        fontSize: 7,
+                                        fontWeight: FontWeight.w600)),
+                              ),
+                            ]),
+                      ));
                 }),
               ),
             ),
             Padding(
                 padding:
-                    EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
+                    EdgeInsets.only(left: 16, right: 16, top: 50, bottom: 50),
                 child: Center(
                     child: Text(
                   "Our Courses",
-                  style: GoogleFonts.openSans(
+                  style: GoogleFonts.robotoCondensed(
                       textStyle: TextStyle(
                           color: Colors.black,
-                          fontSize: 24,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold)),
                 ))),
             Padding(
@@ -359,11 +422,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Nine()));
+                  },
                   title: Center(
                       child: Text(
-                    "Class 9 to 12",
-                    style: TextStyle(color: Colors.indigo[900]),
+                    "Class 9 & Above",
+                    style: TextStyle(color: Colors.indigo[900], fontSize: 22),
                   )),
                 ),
               ),
@@ -378,11 +444,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: ListTile(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Seven()));
+                    },
                     title: Center(
                         child: Text(
                       "Class 7 & 8",
-                      style: TextStyle(color: Colors.indigo[900]),
+                      style: TextStyle(color: Colors.indigo[900], fontSize: 22),
                     )),
                   ),
                 )),
@@ -399,22 +468,25 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: Center(
                       child: Text(
                     "Class 5 & 6",
-                    style: TextStyle(color: Colors.indigo[900]),
+                    style: TextStyle(color: Colors.indigo[900], fontSize: 22),
                   )),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Five()));
+                  },
                 ),
               ),
             ),
             Padding(
                 padding:
-                    EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 16),
+                    EdgeInsets.only(left: 16, right: 16, top: 50, bottom: 50),
                 child: Center(
                     child: Text(
-                  "What Parents Has to Say",
-                  style: GoogleFonts.openSans(
+                  "What Parents Say",
+                  style: GoogleFonts.robotoCondensed(
                       textStyle: TextStyle(
                           color: Colors.black,
-                          fontSize: 24,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold)),
                 ))),
             SingleChildScrollView(
@@ -428,13 +500,18 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Row(
                             children: <Widget>[
                               Image(
-                                image: AssetImage("assets/images/parents.png"),
-                                height: 400,
+                                image: AssetImage("assets/images/T1.jpg"),
+                                height: 260,
                                 width: MediaQuery.of(context).size.width,
                               ),
                               Image(
-                                image: AssetImage("assets/images/p2.jpg"),
-                                height: 400,
+                                image: AssetImage("assets/images/T2.jpg"),
+                                height: 260,
+                                width: MediaQuery.of(context).size.width,
+                              ),
+                              Image(
+                                image: AssetImage("assets/images/T3.jpg"),
+                                height: 260,
                                 width: MediaQuery.of(context).size.width,
                               ),
                             ],

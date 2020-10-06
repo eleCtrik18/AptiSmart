@@ -1,4 +1,6 @@
+import 'package:e_learning/screens/home_screen.dart';
 import 'package:e_learning/screens/phone_verification.dart';
+import 'package:e_learning/services/googlesignin.dart';
 import 'package:flutter/material.dart';
 
 class Signin extends StatefulWidget {
@@ -55,7 +57,15 @@ class _SigninState extends State<Signin> {
               padding: EdgeInsets.symmetric(vertical: 25.0),
               width: 130.0,
               child: RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  signInWithGoogle().whenComplete(() {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => HomeScreen(),
+                      ),
+                    );
+                  });
+                },
                 padding: EdgeInsets.all(15.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0),
@@ -95,7 +105,7 @@ class _SigninState extends State<Signin> {
                 ),
                 color: Colors.teal[200],
                 child: Text(
-                  'OTP',
+                  'Mobile',
                   style: TextStyle(
                     color: Colors.white,
                     letterSpacing: 1.5,
