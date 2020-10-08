@@ -1,7 +1,9 @@
 import 'package:e_learning/screens/home_screen.dart';
 import 'package:e_learning/screens/phone_verification.dart';
 import 'package:e_learning/services/googlesignin.dart';
+import 'package:e_learning/services/phone_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class Signin extends StatefulWidget {
   @override
@@ -57,27 +59,34 @@ class _SigninState extends State<Signin> {
               padding: EdgeInsets.symmetric(vertical: 25.0),
               width: 130.0,
               child: RaisedButton(
-                onPressed: () {
-                  signInWithGoogle().whenComplete(() {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => HomeScreen(),
-                      ),
-                    );
-                  });
+                onPressed: () => {
+                  signInWithGoogle().then((value) => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => HomeScreen())))
                 },
                 padding: EdgeInsets.all(15.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0),
                 ),
-                color: Colors.green[300],
-                child: Text(
-                  'Google',
-                  style: TextStyle(
-                    color: Colors.white,
-                    letterSpacing: 1.5,
-                    fontSize: 18.0,
-                    fontFamily: 'OpenSans',
+                color: Colors.red[200],
+                child: new InkWell(
+                  child: Row(
+                    children: <Widget>[
+                      Icon(MdiIcons.google),
+                      Padding(
+                        padding: EdgeInsets.all(5),
+                      ),
+                      Container(
+                        child: Text(
+                          'Google',
+                          style: TextStyle(
+                            color: Colors.white,
+                            letterSpacing: 0,
+                            fontSize: 18.0,
+                            fontFamily: 'OpenSans',
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -104,13 +113,25 @@ class _SigninState extends State<Signin> {
                   borderRadius: BorderRadius.circular(30.0),
                 ),
                 color: Colors.teal[200],
-                child: Text(
-                  'Mobile',
-                  style: TextStyle(
-                    color: Colors.white,
-                    letterSpacing: 1.5,
-                    fontSize: 18.0,
-                    fontFamily: 'OpenSans',
+                child: new InkWell(
+                  child: Row(
+                    children: <Widget>[
+                      Icon(MdiIcons.phone),
+                      Padding(
+                        padding: EdgeInsets.all(5),
+                      ),
+                      Container(
+                        child: Text(
+                          'Mobile',
+                          style: TextStyle(
+                            color: Colors.white,
+                            letterSpacing: 0,
+                            fontSize: 18.0,
+                            fontFamily: 'OpenSans',
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),

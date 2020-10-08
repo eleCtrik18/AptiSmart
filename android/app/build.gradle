@@ -60,7 +60,11 @@ repositories {
 
 dependencies {
     implementation 'com.razorpay:checkout:1.2.1'
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation 'com.google.firebase:firebase-database-ktx'
+    implementation 'com.google.firebase:firebase-messaging:<latest_version>'
 }
+
 
 flutter {
     source '../..'
@@ -68,5 +72,6 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    
 }
 apply plugin: 'com.google.gms.google-services'

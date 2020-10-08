@@ -31,7 +31,7 @@ class _AdvanceaState extends State<Advancea> {
   void openAdvanceaCheckout() {
     var options = {
       "key": "rzp_live_vmUPL771EAVqld",
-      "amount": (50) * 100,
+      "amount": (5) * 100,
       "name": "Apti Smart",
       "description": "Payment for the Advance Course",
       "prefill": {"contact": "", "email": ""},

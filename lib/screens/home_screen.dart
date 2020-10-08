@@ -254,13 +254,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 scrollDirection: Axis.horizontal,
                 child: Row(children: <Widget>[
                   Image(
-                    image: AssetImage("assets/images/maths.png"),
-                    height: 400,
+                    image: AssetImage("assets/images/slider2.jpg"),
+                    height: 300,
                     width: MediaQuery.of(context).size.width,
                   ),
                   Image(
-                      image: AssetImage("assets/images/student.jpg"),
-                      height: 400),
+                      image: AssetImage("assets/images/slider1.jpg"),
+                      height: 300,
+                      width: MediaQuery.of(context).size.width,
+                  ),
+                   Image(
+                    image: AssetImage("assets/images/slider3.jpg"),
+                    height: 300,
+                    width: MediaQuery.of(context).size.width,
+                  ),
                 ])),
             Padding(
               padding:

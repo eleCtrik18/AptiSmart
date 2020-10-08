@@ -31,7 +31,7 @@ class _ExpertaState extends State<Experta> {
   void openExpertaCheckout() {
     var options = {
       "key": "rzp_live_vmUPL771EAVqld",
-      "amount": (56) * 100,
+      "amount": (5699) * 100,
       "name": "Apti Smart",
       "description": "Payment for the Expert Course",
       "prefill": {"contact": "", "email": ""},

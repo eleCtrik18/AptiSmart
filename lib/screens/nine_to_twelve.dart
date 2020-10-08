@@ -288,7 +288,7 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(12.0, 30.0, 10.0, 8.0),
+            padding: const EdgeInsets.fromLTRB(12.0, 30.0, 8.0, 8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -411,6 +411,7 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                                   fontSize: 22,
                                   color: Colors.black87,
                                   fontFamily: "OpenSans"),
+                              textAlign: TextAlign.justify,
                             ),
                             Text(
                               "     \u2022 Volume and SA",
@@ -717,6 +718,7 @@ class _NinetoTwelveState extends State<NinetoTwelve> {
                               "     \u2022 Data Interpretation - Level 2",
                               style: TextStyle(
                                   fontSize: 22, color: Colors.black87),
+                              textAlign: TextAlign.justify,
                             ),
                             Text(
                               "     \u2022 HOTS - 1",

@@ -45,11 +45,19 @@ dependencies:
   flutter_pdfview: ^1.0.0+10
   path_provider: ^1.6.5
   flutter_windowmanager: ^0.0.1+1
+  numeric_keyboard: ^1.0.0
+  mobx: ^1.1.1
+  flutter_mobx: ^1.1.0
+  provider: ^4.0.4
+  firebase_messaging: ^7.0.3
+
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: ^1.8.1
+  mobx_codegen: ^1.0.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -112,7 +120,9 @@ flutter:
     - assets/logo/lomgo.png
     - assets/images/newhome.jpg
     - assets/images/onestep.jpg
-    - assets/images/student.jpg
+    - assets/images/slider1.jpg
+    - assets/images/slider2.jpg
+    - assets/images/slider3.jpg
 
   
 

@@ -1,3 +1,4 @@
+import 'package:e_learning/screens/home_screen.dart';
 import 'package:e_learning/services/phone_auth.dart';
 import 'package:e_learning/utilities/numeric_pad.dart';
 import 'package:e_learning/utilities/verify_phone.dart';
@@ -68,43 +69,40 @@ class _PhoneState extends State<Phone> {
         body: SafeArea(
           child: Column(
             children: <Widget>[
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      stops: [0.7, 0.9],
-                      colors: [
-                        Color(0xFFFFFFFF),
-                        Color(0xFFF7F7F7),
-                      ],
-                    ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      SizedBox(
-                        height: 130,
-                        child: Image.asset('assets/images/holding-phone.png'),
-                      ),
-                      Padding(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 14, horizontal: 64),
-                        child: Text(
-                          "You'll receive a 4 digit code to verify next.",
-                          style: TextStyle(
-                            fontSize: 22,
-                            color: Color(0xFF818181),
-                          ),
-                        ),
-                      ),
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    stops: [0.7, 0.9],
+                    colors: [
+                      Color(0xFFFFFFFF),
+                      Color(0xFFF7F7F7),
                     ],
                   ),
                 ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(
+                      height: 100,
+                      child: Image.asset('assets/images/holding-phone.png'),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 14, horizontal: 64),
+                      child: Text(
+                        "You'll receive a 4 digit code to verify next.",
+                        style: TextStyle(
+                          fontSize: 22,
+                          color: Color(0xFF818181),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Container(
-                  height: MediaQuery.of(context).size.height * 0.13,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(
@@ -132,12 +130,22 @@ class _PhoneState extends State<Phone> {
                                 SizedBox(
                                   height: 8,
                                 ),
-                                Text(
-                                  phoneNumber,
-                                  style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
+                                TextFormField(
+                                  keyboardType: TextInputType.phone,
+                                  decoration: InputDecoration(
+                                    hintText: ' Enter your phone number',
+                                    prefixText: '+91',
+                                    prefixIcon: Icon(Icons.phone),
+                                    enabledBorder: OutlineInputBorder(
+                                        borderSide:
+                                            BorderSide(color: Colors.grey)),
+                                    border: OutlineInputBorder(),
                                   ),
+                                  onChanged: (val) {
+                                    setState(() {
+                                      phoneNumber = val;
+                                    });
+                                  },
                                 ),
                                 codeSent
                                     ? Center(
@@ -193,8 +201,13 @@ class _PhoneState extends State<Phone> {
                                   AuthService()
                                       .savePhoneNumber(this.phoneNumber);
                                   codeSent
-                                      ? AuthService().signInWithOTP(
-                                          smsCode, verificationId)
+                                      ? AuthService()
+                                          .signInWithOTP(
+                                              smsCode, verificationId)
+                                          .then((value) => Navigator.of(context)
+                                              .push(MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      HomeScreen())))
                                       : verifyPhone(phoneNumber);
                                 })),
                       ])))

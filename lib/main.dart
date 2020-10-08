@@ -33,6 +33,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData.light(),
       debugShowCheckedModeBanner: true,
       home: ImageSplashScreen(),
+      routes: {'/HomeScreen': (context) => HomeScreen()},
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 
 class FirebaseUserProvider extends ChangeNotifier {
-  FirebaseUser user;
+  User user;
 
   FirebaseUserProvider() {
     _getUser();
