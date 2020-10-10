@@ -50,6 +50,7 @@ dependencies:
   flutter_mobx: ^1.1.0
   provider: ^4.0.4
   firebase_messaging: ^7.0.3
+  fluttertoast: ^7.1.1
 
 
 

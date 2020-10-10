@@ -7,6 +7,7 @@ import 'package:e_learning/screens/ninetotwelve.dart';
 import 'package:e_learning/screens/privacy_policy.dart';
 import 'package:e_learning/screens/seveneight.dart';
 import 'package:e_learning/screens/terms_condition.dart';
+import 'package:e_learning/services/googlesignin.dart';
 import 'package:e_learning/services/phone_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_windowmanager/flutter_windowmanager.dart';
@@ -151,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: EdgeInsets.symmetric(horizontal: 16),
                     child: IconButton(
                       onPressed: () async {
-                        await AuthService().signOut();
+                        await googleSignIn.disconnect();
                       },
                       icon: Icon(
                         MdiIcons.logout,
@@ -259,11 +260,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: MediaQuery.of(context).size.width,
                   ),
                   Image(
-                      image: AssetImage("assets/images/slider1.jpg"),
-                      height: 300,
-                      width: MediaQuery.of(context).size.width,
+                    image: AssetImage("assets/images/slider1.jpg"),
+                    height: 300,
+                    width: MediaQuery.of(context).size.width,
                   ),
-                   Image(
+                  Image(
                     image: AssetImage("assets/images/slider3.jpg"),
                     height: 300,
                     width: MediaQuery.of(context).size.width,

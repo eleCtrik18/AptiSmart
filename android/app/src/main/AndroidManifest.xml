@@ -11,7 +11,7 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="e_learning"
+        android:label="AptiSmart"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

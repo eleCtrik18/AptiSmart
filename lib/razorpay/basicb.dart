@@ -1,5 +1,5 @@
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
-import 'package:toast/toast.dart';
 import 'package:flutter/material.dart';
 
 class Basicb extends StatefulWidget {
@@ -32,6 +32,7 @@ class _BasicbState extends State<Basicb> {
     var options = {
       "key": "rzp_live_vmUPL771EAVqld",
       "amount": (2799) * 100,
+      "order_id": "",
       "name": "Apti Smart",
       "description": "Payment for the Basic Course",
       "prefill": {"contact": "", "email": ""},
@@ -47,19 +48,41 @@ class _BasicbState extends State<Basicb> {
     }
   }
 
-  void handlerPaymentSuccess() {
-    print("Payment success");
-    Toast.show("Payment success", context);
+  void handlerPaymentSuccess(PaymentSuccessResponse response) {
+    print(response.paymentId.toString());
+
+    Fluttertoast.showToast(
+        msg: "Payment Successful for Basic Course",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.green[300],
+        textColor: Colors.black,
+        fontSize: 16.0);
   }
 
-  void handlerErrorFailure() {
-    print("Payment error");
-    Toast.show("Payment error", context);
+  void handlerErrorFailure(PaymentFailureResponse response) {
+    print(response.message + response.code.toString());
+    Fluttertoast.showToast(
+        msg: "Payment Failed for Basic Course",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red[300],
+        textColor: Colors.black,
+        fontSize: 16.0);
   }
 
-  void handlerExternalWallet() {
-    print("External Wallet");
-    Toast.show("External Wallet", context);
+  void handlerExternalWallet(ExternalWalletResponse response) {
+    print(response.walletName);
+    Fluttertoast.showToast(
+        msg: "External Wallet",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.orange[300],
+        textColor: Colors.black,
+        fontSize: 16.0);
   }
 
   Widget build(BuildContext context) {
