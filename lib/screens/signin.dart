@@ -52,92 +52,45 @@ class _SigninState extends State<Signin> {
         ],
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 25.0),
-              width: 130.0,
-              child: RaisedButton(
-                onPressed: () => {
-                  signInWithGoogle().then((value) => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomeScreen())))
-                },
-                padding: EdgeInsets.all(15.0),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                ),
-                color: Colors.red[200],
-                child: new InkWell(
-                  child: Row(
-                    children: <Widget>[
-                      Icon(MdiIcons.google),
-                      Padding(
-                        padding: EdgeInsets.all(5),
-                      ),
-                      Container(
-                        child: Text(
-                          'Google',
-                          style: TextStyle(
-                            color: Colors.white,
-                            letterSpacing: 0,
-                            fontSize: 18.0,
-                            fontFamily: 'OpenSans',
-                          ),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: <
+            Widget>[
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 25.0),
+            width: 130.0,
+            child: RaisedButton(
+              onPressed: () => {
+                signInWithGoogle().then((value) => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => HomeScreen())))
+              },
+              padding: EdgeInsets.all(15.0),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30.0),
+              ),
+              color: Colors.red[200],
+              child: new InkWell(
+                child: Row(
+                  children: <Widget>[
+                    Icon(MdiIcons.google),
+                    Padding(
+                      padding: EdgeInsets.all(5),
+                    ),
+                    Container(
+                      child: Text(
+                        'Google',
+                        style: TextStyle(
+                          color: Colors.white,
+                          letterSpacing: 0,
+                          fontSize: 18.0,
+                          fontFamily: 'OpenSans',
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),
-            Column(
-              children: <Widget>[
-                Text(
-                  "- OR -",
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w400),
-                )
-              ],
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 25.0),
-              width: 130.0,
-              child: RaisedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Phone()));
-                },
-                padding: EdgeInsets.all(15.0),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                ),
-                color: Colors.teal[200],
-                child: new InkWell(
-                  child: Row(
-                    children: <Widget>[
-                      Icon(MdiIcons.phone),
-                      Padding(
-                        padding: EdgeInsets.all(5),
-                      ),
-                      Container(
-                        child: Text(
-                          'Mobile',
-                          style: TextStyle(
-                            color: Colors.white,
-                            letterSpacing: 0,
-                            fontSize: 18.0,
-                            fontFamily: 'OpenSans',
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ]),
       ),
     );
   }

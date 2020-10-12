@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "708003283926",
-    "firebase_url": "https://aptismart-f29b1.firebaseio.com",
-    "project_id": "aptismart-f29b1",
-    "storage_bucket": "aptismart-f29b1.appspot.com"
+    "project_number": "710429077922",
+    "firebase_url": "https://aptismart-6c863.firebaseio.com",
+    "project_id": "aptismart-6c863",
+    "storage_bucket": "aptismart-6c863.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:708003283926:android:aa822e329b8e56d5f89a77",
+        "mobilesdk_app_id": "1:710429077922:android:b399926bf28c741d0d02fb",
         "android_client_info": {
-          "package_name": "com.example.e_learning"
+          "package_name": "com.app.aptismart"
         }
       },
       "oauth_client": [
         {
-          "client_id": "708003283926-5700bvco42lahsjlr9o5k6vbdjnc324h.apps.googleusercontent.com",
+          "client_id": "710429077922-3uu9j4uhv6sn7a4o9bq9i7ft37bi24gh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.aptismart",
+            "certificate_hash": "e79670b54f1339eeae4e00c2c24e4825dd9ffa84"
+          }
+        },
+        {
+          "client_id": "710429077922-tufj2053q4olalr6ra277j8jvq01bsb0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAP56XpL-ioQNV06Ojc1IZTI8rYstY5_xI"
+          "current_key": "AIzaSyAdBTSNVVK7tR4ep4UtGkOweVTkQ8ogQYY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "708003283926-5700bvco42lahsjlr9o5k6vbdjnc324h.apps.googleusercontent.com",
+              "client_id": "710429077922-tufj2053q4olalr6ra277j8jvq01bsb0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
