@@ -152,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: EdgeInsets.symmetric(horizontal: 16),
                     child: IconButton(
                       onPressed: () async {
-                        await googleSignIn.disconnect();
+                        await AuthService().signOut();
                       },
                       icon: Icon(
                         MdiIcons.logout,
