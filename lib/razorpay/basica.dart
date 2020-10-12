@@ -31,7 +31,7 @@ class _BasicaState extends State<Basica> {
   void openBasicaCheckout() {
     var options = {
       "key": "rzp_live_vmUPL771EAVqld",
-      "amount": (27) * 100,
+      "amount": (2799) * 100,
       "order_id": "",
       "name": "Apti Smart",
       "description": "Payment for the Basic Course",

@@ -1,5 +1,5 @@
-import 'package:e_learning/razorpay/advanceb.dart';
-import 'package:e_learning/razorpay/basicb.dart';
+import 'package:aptismart/razorpay/advanceb.dart';
+import 'package:aptismart/razorpay/basicb.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

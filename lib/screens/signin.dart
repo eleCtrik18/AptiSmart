@@ -1,7 +1,7 @@
-import 'package:e_learning/screens/home_screen.dart';
-import 'package:e_learning/screens/phone_verification.dart';
-import 'package:e_learning/services/googlesignin.dart';
-import 'package:e_learning/services/phone_auth.dart';
+import 'package:aptismart/screens/home_screen.dart';
+import 'package:aptismart/screens/phone_verification.dart';
+import 'package:aptismart/services/googlesignin.dart';
+import 'package:aptismart/services/phone_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 

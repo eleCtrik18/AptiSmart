@@ -1,6 +1,6 @@
-import 'package:e_learning/screens/five_and_six.dart';
-import 'package:e_learning/screens/nine_to_twelve.dart';
-import 'package:e_learning/screens/seven_and_eight.dart';
+import 'package:aptismart/screens/five_and_six.dart';
+import 'package:aptismart/screens/nine_to_twelve.dart';
+import 'package:aptismart/screens/seven_and_eight.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

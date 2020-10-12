@@ -31,7 +31,7 @@ class _IntermediteaaState extends State<Intermediteaa> {
   void openIntermediteaCheckout() {
     var options = {
       "key": "rzp_live_vmUPL771EAVqld",
-      "amount": (4) * 100,
+      "amount": (4199) * 100,
       "order_id": "",
       "name": "Apti Smart",
       "description": "Payment for the Intermediate Course",

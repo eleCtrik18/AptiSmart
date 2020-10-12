@@ -1,4 +1,4 @@
-import 'package:e_learning/screens/seven_and_eight.dart';
+import 'package:aptismart/screens/seven_and_eight.dart';
 import 'package:flutter/material.dart';
 
 class Seven extends StatelessWidget {

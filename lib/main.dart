@@ -1,5 +1,5 @@
-import 'package:e_learning/screens/home_screen.dart';
-import 'package:e_learning/screens/splash_screen.dart';
+import 'package:aptismart/screens/home_screen.dart';
+import 'package:aptismart/screens/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 

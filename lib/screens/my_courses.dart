@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:e_learning/screens/pdf_view.dart';
+import 'package:aptismart/screens/pdf_view.dart';
 import 'package:flutter/material.dart';
 
 class Mycourses extends StatefulWidget {

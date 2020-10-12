@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:e_learning/screens/new_login.dart';
-import 'package:e_learning/services/phone_auth.dart';
+import 'package:aptismart/screens/new_login.dart';
+import 'package:aptismart/services/phone_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';

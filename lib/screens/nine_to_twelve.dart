@@ -1,7 +1,7 @@
-import 'package:e_learning/razorpay/advancea.dart';
-import 'package:e_learning/razorpay/basica.dart';
-import 'package:e_learning/razorpay/experta.dart';
-import 'package:e_learning/razorpay/intermeditea.dart';
+import 'package:aptismart/razorpay/advancea.dart';
+import 'package:aptismart/razorpay/basica.dart';
+import 'package:aptismart/razorpay/experta.dart';
+import 'package:aptismart/razorpay/intermeditea.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

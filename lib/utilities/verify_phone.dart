@@ -1,7 +1,7 @@
-import 'package:e_learning/services/phone_auth.dart';
+import 'package:aptismart/services/phone_auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:e_learning/utilities/numeric_pad.dart';
+import 'package:aptismart/utilities/numeric_pad.dart';
 
 class VerifyPhone extends StatefulWidget {
   final String phoneNumber;

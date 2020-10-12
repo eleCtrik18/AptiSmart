@@ -1,4 +1,4 @@
-import 'package:e_learning/screens/five_and_six.dart';
+import 'package:aptismart/screens/five_and_six.dart';
 import 'package:flutter/material.dart';
 
 class Five extends StatelessWidget {
